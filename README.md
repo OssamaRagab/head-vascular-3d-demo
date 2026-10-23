@@ -82,6 +82,16 @@ The HTML file is ~13 MB because the mesh geometry is embedded inline. If you wan
 - Plain CSS custom properties for theming
 - No framework, no bundler, no dependencies beyond Three.js
 
+## Credits & Attribution
+
+**Bio Imaging Lab — Dr. Ayman Elbaz**
+
+This work was developed at the **Bio Imaging Lab** under the supervision of **Dr. Ayman Elbaz**.
+All rights to the dataset, segmentation pipeline, and visualization belong to the lab.
+
+If you use, fork, or build upon this demo, please retain the attribution above
+and cite the lab as the source.
+
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+MIT — see [LICENSE](./LICENSE). Copyright © 2026 Bio Imaging Lab — Dr. Ayman Elbaz.
