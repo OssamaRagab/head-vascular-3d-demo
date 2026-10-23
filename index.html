@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Head vascular candidates: 3-D demo</title>
+<title>Head vascular candidates: 3D demo</title>
 <style>
 :root{--bg:#eef0f2;--fg:#16202a;--mut:#5c6874;--card:#fff;--bd:#cdd3d9;--ac:#a31d2b;--acfg:#fff;--grid:#b8c0c8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1418;--fg:#e6ebef;--mut:#93a0ab;--card:#182027;--bd:#2c3740;--ac:#ff7a84;--acfg:#1a0a0c;--grid:#2f3b45}}
@@ -25,16 +25,16 @@ output{font-variant-numeric:tabular-nums}
 #stats{padding:8px 18px 0;font-variant-numeric:tabular-nums}
 footer{padding:4px 18px 14px;color:var(--mut);font-size:13px;max-width:100ch}
 </style></head><body>
-<header><h1>Head vascular candidates: 3-D demo</h1>
-<p>Bright vessel candidates from a post-contrast 3-D MPRAGE MRI. Pick a threshold to show more or fewer vessels and a minimum piece size to hide small fragments, then drag to rotate and scroll to zoom.</p></header>
+<header><h1>Head vascular candidates: 3D demo</h1>
+<p>Bright vessel candidates from a post-contrast 3D MPRAGE MRI. Pick a threshold to show more or fewer vessels and a minimum piece size to hide small fragments, then drag to rotate and scroll to zoom.</p></header>
 <div class="bar">
 <div class="grp"><label for="th"><span>Threshold (gray value)</span></label><input id="th" type="range" min="0" max="6" step="1" value="1"><output id="to" for="th"></output></div>
 <div class="grp" id="vw" role="group" aria-label="View"><span>View</span></div>
 <div class="grp"><label for="ms"><span>Minimum piece size</span></label><input id="ms" type="range" min="0" max="8" step="1" value="4"><output id="mo" for="ms"></output></div>
 </div>
-<div id="stage"><div id="msg">Loading 3-D model…</div></div>
+<div id="stage"><div id="msg">Loading 3D model…</div></div>
 <div id="stats" aria-live="polite"></div>
-<footer>Preliminary and intensity-based: other bright tissue can be included, and it has not been validated. Not for clinical use. Axes are in millimeters (grid squares = 10 mm). Contains no DICOM images or patient information. Thresholds are absolute gray values of the original MRI (range 0 to 5000). In the MATLAB code, threshold = T2 + bias, and minComponentVoxels is the minimum piece size. &copy; Bio Imaging Lab — Dr. Ayman Elbaz.</footer>
+<footer>Preliminary and intensity-based: other bright tissue can be included, and it has not been validated. Not for clinical use. Axes are in millimeters (grid squares = 10 mm). Contains no DICOM images or patient information. Thresholds are absolute gray values of the original MRI (range 0 to 5000). In the MATLAB code, threshold = T2 + bias, and minComponentVoxels is the minimum piece size. &copy; University of Louisville - Bio-Imaging Lab - Dr. Ayman El-Baz.</footer>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <script>
@@ -87,5 +87,5 @@ async function inflate(){
   function size(){const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}
   addEventListener('resize',size);size();setView('Front');refresh();msg.remove();
   (function loop(){requestAnimationFrame(loop);ctl.update();renderer.render(scene,cam);})();
-}catch(e){msg.textContent=e.message||'Could not load the 3-D model.';}})();
+}catch(e){msg.textContent=e.message||'Could not load the 3D model.';}})();
 </script></body></html>
