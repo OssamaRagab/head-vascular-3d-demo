@@ -1,0 +1,18 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Local server logs
+*.log
+
+# Don't commit any extracted / re-encoded mesh data unless intended
+*.stl
+*.obj
+*.ply
+*.glb
+*.gltf
